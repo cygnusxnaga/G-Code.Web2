@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+
+}
+body {
+    height: 100vh;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+section {
+    height: 100vh;
+    padding: 10em;
+}
+#section1 {
+    background-color: blue;
+}
+#section2 {
+    background-color: yellow;
+}
+#section1 h1 {
+
+    background-color: black;
+    color: antiquewhite;
+}
+
+#section1 p {
+
+    background-color: black;
+    color: antiquewhite;
+}
+
+#section2 h1 {
+
+    background-color: black;
+    color: antiquewhite;
+}
+
+#section2 p {
+
+    background-color: black;
+    color: antiquewhite;
+}
+.pclass {
+    opacity: 0;
+    transition: opacity 5s;
+}
+.scroll-class{
+opacity: 1;
+
+}
+

@@ -1,0 +1,323 @@
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    background-color: black;
+}
+nav {
+ 
+    height: 100%; /*max height and width for responsiveness*/
+    width: 100%;
+    background-color: none;
+    /*cursor: pointer;*/
+    transition: .5s;
+    justify-content: space-around;
+    margin: auto;
+  } 
+  nav:hover {
+      /*background-color: rgba(255, 255, 255, 0.622);*/
+      
+  }
+  
+  nav ul {
+    
+    display: flex; /*this displays the text in line */
+    
+    justify-content: center ;  /*this puts the list items in the center of the nav*/
+  
+  }
+  nav ul li {
+     margin:0 7%;/*padding between each list item*/
+      line-height: 100px; /*centers the text inside of ul*/
+     display: inline-block;
+     justify-content: space-around;
+    
+  }
+  
+  nav ul li a {
+     
+      font-size: 150%;
+      -webkit-font-smoothing: antialiased;
+      color:azure;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      position: relative;
+      padding: 0 10px;
+      transition: .5s
+      
+      
+  }
+  
+  nav ul li a:hover {
+    
+      background-color:rgba(0,0,0,0.8);
+      border-radius: 20%;
+      padding: 10px;
+      height: 3px;
+      width: 100%;
+  
+  
+  
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height:100px;
+}
+.checkbtn img {
+    width: 30%;
+    float:right;
+    margin:10%;
+    cursor: pointer;
+    display:none;
+    
+}
+
+#check {
+    display: none;
+}
+
+
+@media (max-width: 952px){
+    
+
+    nav ul li a {
+        font-size: 125%;
+    }
+    .intro {
+        display: flex;
+    }
+
+    .intro img {
+        float: left;
+        width: 40%;
+        
+    }
+    .intro .introtext {
+        float: right;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn img{
+        display: block; /*display at 858px*/
+      
+
+    }
+        ul{
+            position: fixed;
+            width: 100%;
+            height:100vh;
+            background: rgb(124, 121, 121); /*ADD side bar image here*/
+            
+            top:80px;
+            left: -100%;    /*figure out how to stack content in menu*/
+            transition: all .5s;
+            text-align: center;
+        }
+        nav ul li {
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+
+        }
+        nav ul li a {
+            font-size: 20px;
+            
+        }
+        nav ul li a:hover{  /*add hover animation here*/
+            background: none;
+            color:rgb(138, 245, 24)
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+}
+
+.intro img {
+    padding-left: 3%;
+  
+  cursor: pointer;
+ }
+ 
+ .intro .introtext {
+     float: right;
+     padding-right: 5%;
+     padding-top: 15%;
+     text-align: center;
+     color: white;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size:40px;
+     cursor: pointer;
+ }
+ .intro .introtext a{
+ color: white;
+ }
+ .intro .introtext:hover {
+     -webkit-text-stroke: 2px ;
+ }
+ .section1 {
+     background-image: linear-gradient(rgba(0,0,0,0.4),
+     rgba(0,0,0,0.4)), url(/content/finesser.png)  ;
+     background-size: cover;
+     height: calc(100vh - 20px);
+     background-position: center;
+     z-index: -5;
+ }
+ .divide{
+
+    background-color: black;
+    
+    height: 10%;
+    width: 100%;
+    background-clip:border-box;
+    padding: 100px;
+    
+   
+
+}
+.divide h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top:5%;
+}
+.divide h3 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+     
+}
+.divide1{
+
+    background-color: whitesmoke;
+    
+    height: 10%;
+    width: 100%;
+    background-clip:border-box;
+    padding: 100px;
+}
+
+.rich {
+    background-color:black;
+    width: 100%;
+    display:flex;
+    margin: 0;
+    color: white;
+
+}
+.rich .desc {
+    float: left;
+    color: white;
+    padding-left: 20%;
+    padding-right: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.yo {
+ 
+    opacity: 0;
+  
+}
+.scroll-class {
+    transition: opacity 5s;
+    float: right;
+    width:100%;
+    padding-right: 10%;
+    opacity: 1;
+
+}
+
+.rich2 {
+    background-color:whitesmoke;
+    width: 100%;
+    display:flex;
+    margin: 0;
+
+}
+.rich2 .desc2 {
+    float: right;
+    color: black;
+    padding:10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.scroll-class2 {
+    transition: opacity 5s;
+    float: left;
+    width:100%;
+    padding: 10% ;
+    opacity:1;
+
+
+}
+
+
+
+
+
+
+/*animations below*/
+
+.box {
+	display: flex;
+    align-content: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.box .inner {
+	width: 400px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 4em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: #d4af37;
+	color: rgb(48, 146, 66);
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box .inner:last-child {
+	background-color: rgb(48, 146, 66);
+	color: #d4af37;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}

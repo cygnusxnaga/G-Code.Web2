@@ -1,0 +1,343 @@
+* {
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+/******{ nav }**********************************************************************/
+
+nav {
+ 
+  height: 15%; /*max height and width for responsiveness*/
+  width: 100%;
+  background-color:rgba(254, 249, 249, 0);
+  /*cursor: pointer;*/
+  transition: .5s;
+  justify-content: space-around;
+  margin: auto;
+} 
+nav:hover {
+    /*background-color: rgba(255, 255, 255, 0.622);
+    background-color:rgb(254, 249, 249);*/
+    
+}
+
+nav ul {
+  
+  display: flex; /*this displays the text in line */
+  
+  justify-content: center ;  /*this puts the list items in the center of the nav*/
+
+  color: black;
+}
+nav ul li {
+   margin:0 7%;/*padding between each list item*/
+    line-height: 100px; /*centers the text inside of ul*/
+   display: inline-block;
+   justify-content: space-around;
+  
+}
+nav ul:hover {
+  transition:  .5s;
+  
+}
+nav ul li a {
+   
+    font-size: 150%;
+    -webkit-font-smoothing: antialiased;
+    color:azure;
+    font-family:ag;
+    position: relative;
+    padding: 0 10px;
+    transition: .5s;
+    
+    
+}
+
+nav ul li a:hover {
+  
+    background-color:rgba(0,0,0,0.8);*/
+    border-bottom: 3px ridge rgba(249, 6, 6, 0.52);
+    padding: 10px;
+    height: 0px;
+    width: 100%;
+    font-size: 170%;
+    border-radius: 100;
+    border-style: groove ;
+  
+
+
+}
+.name {
+ 
+  float: right;
+  padding: 5%;
+  margin-top:10%;
+ 
+ 
+  text-align: center;
+}
+.name .nameLink h1 {
+font-family: ag;
+color:cornsilk;
+font-size:400%;
+}
+.name .nameLink h3 {
+font-family: ag;
+color:cornsilk;
+font-size:200%;
+}
+.name .nameLink h1:hover {
+font-family: ag;
+color:cornsilk;
+transition: 2s;
+
+
+}
+.name .nameLink h3 {
+font-family: ag;
+color:cornsilk;
+font-size:200%;
+}
+
+@font-face {
+  font-family: 'ag';
+  src: url("/HARMONY\ Personal\ use.otf")
+}
+
+/******{ nav media }**********************************************************************/
+
+
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height:100px;
+}
+.checkbtn img {
+  width: 30%;
+  float:right;
+  margin:10%;
+  cursor: pointer;
+  display:none;
+  
+}
+
+#check {
+  display: none;
+}
+
+
+@media (max-width: 952px){
+  
+
+  nav ul li a {
+      font-size: 125%;
+  }
+  .intro {
+      display: flex;
+  }
+
+  .intro img {
+      float: left;
+      width: 40%;
+      
+  }
+  .intro .introtext {
+      float: right;
+      justify-content: center;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn img{
+      display: block; /*display at 858px*/
+    
+
+  }
+      ul{
+          position: fixed;
+          width: 100%;
+          height:100vh;
+          background: rgb(124, 121, 121); /*ADD side bar image here*/
+          
+          top:80px;
+          left: -100%;    /*figure out how to stack content in menu*/
+          transition: all .5s;
+          text-align: center;
+      }
+      nav ul li {
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+
+      }
+      nav ul li a {
+          font-size: 20px;
+          
+      }
+      nav ul li a:hover{  /*add hover animation here*/
+          background: none;
+          color:rgb(138, 245, 24)
+      }
+      #check:checked ~ ul{
+          left: 0;
+      }
+}
+
+/******{ nav media }**********************************************************************/
+
+/******{ nav }**********************************************************************/
+
+.section1 {
+    background-image: linear-gradient(rgba(0,0,0,0.0),
+    rgba(0,0,0,.6)), url(/content/IMG_4765.jpeg);
+    background-size:cover ;
+    height: 100vh;
+    background-position: center;
+    z-index: -5;
+   
+}
+.section2 {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+ 
+  color: white;
+
+}
+.section3 {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+  color: white;
+
+}
+.section3 img {
+    background-color: black;
+    width: 20%;
+    
+  
+
+}
+.suspect {
+    width: 10%;
+}
+
+.fade {
+    position: relative;
+    width: 100%;
+    min-height: 20vh;
+    top: -25px;
+    background-image: linear-gradient(0deg, transparent, black 75%);
+    z-index: 1;
+  }
+  
+  .star-wars {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    perspective: 200px;
+    text-align: justify;
+  }
+  
+  .crawl {
+    position: relative;
+    top: 99999px;
+    transform-origin: 50% 100%;
+    animation: crawl 70s linear;
+  }
+  
+  .crawl > .title {
+    font-size: 90%;
+    text-align: center;
+  }
+  
+  .crawl > .title h1 {
+    margin: 0 0 100px;
+    text-transform: uppercase;
+  }
+  
+  @keyframes crawl {
+    0% {
+      top: -100px;
+      transform: rotateX(20deg)  translateZ(0);
+    }
+    100% { 
+      top: -6000px;
+      transform: rotateX(25deg) translateZ(-2500px);
+    }
+  }
+  
+  
+.space {
+    opacity: 0;
+}
+
+
+/**********{ ANIMATIONS }***********************/
+
+.box {
+	display: flex;
+    align-content: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.box .inner {
+	width: 400px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 4em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: #050505;
+	color: rgb(48, 146, 66);
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: groove;
+}
+
+.box .inner:last-child {
+	background-color: rgb(6, 6, 6);
+	color: #d4af37;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: groove;
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}

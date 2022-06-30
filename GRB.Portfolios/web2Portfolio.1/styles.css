@@ -1,0 +1,80 @@
+.banner {
+    width: 100%;
+    height: 100vh;
+ background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)),url(/content/finesser.png);
+  background-size: cover;
+  background-position: center;
+  padding:0;
+  z-index: -3;
+}
+.navbar {
+height:100vh;
+width:100%;
+display:flex ;
+/*background-color:yellow;*/
+    }
+    .navbar .logo {
+        width:100%;
+        border-color: black;
+        border-width: 40px;
+        z-index: 1;
+    }
+    .navbar .logo img{
+        border-color: black;
+        border-width: 40px;
+        z-index: 1;
+    }
+    .re h1  {
+      font-size: 30px;
+      text-align: center;
+      padding: 0;
+      align-content: space-evenly;
+    }
+    .re {
+        font-size: 30px;
+        text-align: ;
+        padding: 0;
+        align-content: space-between;
+ 
+      }
+  
+    .messageBar {
+      background-color:black;
+      color:white;
+      max-width: 100%;
+      font-size:x-small;
+    }
+  
+.section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/content/finesser.png);
+}
+
+.section1 .background1 {
+    width: 100%;
+    height:100%;
+    opacity: 1;
+}
+
+.section2 .background22 {
+    opacity: 0;
+    transition: opacity 5s;
+
+}
+.section2 .background2 {
+    width: 100%;
+    height:100%;
+    opacity: 1;
+}
+
+.section3 .background33 {
+    opacity: 0;
+    transition: opacity 5s;
+}
+.section3 .background3 {
+    width: 100%;
+    height:100%;
+    opacity: 1;
+}
